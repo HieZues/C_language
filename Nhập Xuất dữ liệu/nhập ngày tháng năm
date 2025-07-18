@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main (){
+   int ngay, thang, nam;
+   printf ("nhap vao ngay thang nam: ");
+   scanf ("%d%d%d", &ngay, &thang, &nam);
+   nam = nam % 1000;
+   printf ("ngay thang nam ban nhap vao la: %02d/%02d/%d", ngay, thang, nam);
+
+}
