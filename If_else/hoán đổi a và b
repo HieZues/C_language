@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main (){
+   int a, b, max;
+   printf ("nhap vao 2 gia tri a va b: ");
+   scanf ("%d%d", &a, &b);
+   max = a;
+   if (b > a){
+    max= b;
+    printf ("Max = %d", b);
+   } else {
+   printf ("max = %d", a);
+           }
+}
