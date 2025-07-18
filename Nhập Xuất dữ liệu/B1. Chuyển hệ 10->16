@@ -1,0 +1,8 @@
+#include <stdio.h> 
+
+int main () {
+  int a;
+  printf("nhap vao gia tri a: ");
+  scanf ("%d", &a);
+  printf ("Gia tri cua %d chuyen tu he so 10 sang he 16 la: %x", a, a);
+}
