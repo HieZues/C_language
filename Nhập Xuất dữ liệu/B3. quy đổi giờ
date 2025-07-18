@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main (){
+   int gio, phut, giay, tongsogiay;
+   printf ("nhap vao tong so giay: ");
+   scanf ("%d", &tongsogiay);
+   gio = tongsogiay / 3600;
+   phut = (tongsogiay % 3600) / 60;
+   giay = tongsogiay % 60;
+   printf ("so gio phut giay quy doi la: %02d:%02d:%02d ", gio, phut, giay);
+}
