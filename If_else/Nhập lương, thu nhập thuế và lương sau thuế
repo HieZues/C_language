@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (){
+  float luong, thuethunhap;
+  printf ("Luong 1 thang di lam cua ban la (VND): ");
+  scanf ("%f", &luong);
+  if (luong >= 15000000) {
+    thuethunhap = luong*30/100;
+    printf ("Thue thu nhap cua ban la: %.0f\n", thuethunhap);
+    luong = luong - thuethunhap;
+    printf ("So tien linh sau thue cua ban la: %.0f", luong);
+  }
+  else if ( luong >= 7000000 && luong < 15000000) {
+    thuethunhap = luong*20/100;
+    printf ("Thue thu nhap cua ban la: %.0f\n", thuethunhap);
+    luong = luong - thuethunhap;
+    printf ("So tien sau thue cua ban la: %.0f", luong);
+  }
+  else if (luong < 7000000) {
+    thuethunhap = luong*10/100;
+    printf ("Thue thu nhap cua ban la: %.0f\n", thuethunhap);
+    luong = luong - thuethunhap;
+    printf ("So tien sau thue cua ban la: %.0f", luong);
+  }
+  return 0;
+}
