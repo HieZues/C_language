@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main () {
+ int sophutgoi, phithuebao;
+  printf ("Ban da goi het so phut: ");
+  scanf ("%d", &sophutgoi);
+  if (sophutgoi <= 10){
+    phithuebao = 25000 + (sophutgoi*600);
+    printf ("Tien cuoc cua ban la: %d", phithuebao);
+  }
+  else if (sophutgoi > 10 && sophutgoi <= 60 ) {
+    phithuebao = 25000 + 10*600 + (sophutgoi -10)*400;
+    printf ("Tien cuoc cua ban la: %d", phithuebao);
+  }
+  else if (sophutgoi > 60){
+    phithuebao = 25000 + 10*600 + 50*400 +(sophutgoi - 60)*200;
+    printf ("Tien cuoc cua ban la: %d", phithuebao);
+  }
+  return 0;
+}
