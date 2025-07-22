@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main () {
+  int giave, tuoi;
+  printf ("Nhap vao gia ve: "); scanf ("%d", &giave);
+  do {
+    printf ("nhap vao do tuoi cua ban: "); scanf ("%d", &tuoi);
+    if (tuoi < 0 || tuoi > 120 ) {
+        printf ("tuoi khong hop le. Vui long nhap lai!\n");
+    }
+  } while (tuoi < 0 || tuoi > 120);
+  if (tuoi <= 15) {
+    printf ("Ban duoc giam gia ve vao cua\n");
+    if (tuoi < 6){
+        giave = giave - (giave/2);
+        printf ("Ban duoc giam gia 50%%. Gia ve cua ban la: %d", giave);
+    }
+    else if (tuoi >=6 && tuoi <= 10){
+        giave = giave - (giave*30/100);
+        printf ("Ban duoc giam gia 30%%. Gia ve cua ban la: %d", giave);
+    }
+    else if (tuoi > 10 && tuoi <= 15){
+        giave= giave - (giave*15/100);
+        printf ("Ban duoc giam 15%%. Gia ve cua ban la: %d", giave);
+    }
+  }
+  else {
+    printf ("Ban khong duoc mien giam gia ve.\n");
+  }
+}
