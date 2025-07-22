@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main (){
+   float diemtoan, diemly, diemhoa;
+   // Nhập điểm Toán
+    do {
+        printf("Nhap vao diem Toan (0 - 10): ");
+        scanf("%f", &diemtoan);
+        if (diemtoan < 0 || diemtoan > 10) {
+            printf("Diem khong hop le. Vui long nhap lai!\n");
+        }
+    } while (diemtoan < 0 || diemtoan > 10);
+
+    // Nhập điểm Hóa
+    do {
+        printf("Nhap vao diem Hoa (0 - 10): ");
+        scanf("%f", &diemhoa);
+        if (diemhoa < 0 || diemhoa > 10) {
+            printf("Diem khong hop le. Vui long nhap lai!\n");
+        }
+    } while (diemhoa < 0 || diemhoa > 10);
+
+    // Nhập điểm Lý
+    do {
+        printf("Nhap vao diem Ly (0 - 10): ");
+        scanf("%f", &diemly);
+        if (diemly < 0 || diemly > 10) {
+            printf("Diem khong hop le. Vui long nhap lai!\n");
+        }
+    } while (diemly < 0 || diemly > 10);
+
+   float tbm = (diemtoan + diemhoa + diemly)/3;
+   printf ("Diem trung binh khoi A00 la: %.2f\n", tbm);
+   if (tbm >= 9 && tbm <=10) {
+    printf ("Ban dat hoc sinh xuat sac");
+   }
+   else if ( tbm <9 && tbm >= 8) {
+    printf ("Ban dat hoc sinh gioi");
+   }
+   else if (tbm < 8 && tbm >= 6.5) {
+    printf ("ban dat hoc sinh kha");
+   }
+   else  {
+    printf ("Ban dat hoc sinh TBY");
+   }
+}
