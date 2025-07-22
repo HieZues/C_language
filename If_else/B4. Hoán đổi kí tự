@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main (){
+   char kitu;
+   printf ("nhap vao ki tu: ");
+   scanf ("%c", &kitu);
+   if (kitu >= 'a' && kitu <= 'z') {
+       kitu = kitu - 32;
+       printf ("%c", kitu);
+   }
+   else if (kitu >= 'A' && kitu <= 'Z') {
+       kitu = kitu + 32;
+       printf ("%c", kitu);
+   }
+   else if (kitu >= '0' && kitu <= '9') {
+       printf ("Ki tu chung ta vua nhap la so: %c", kitu);
+   }
+   else {
+    printf ("Chung ta da nhap ki tu: %c", kitu);
+   }
+}
