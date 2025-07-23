@@ -17,7 +17,7 @@ void MenuFood () {
  printf("2.Com rang dui ga\n");
  printf("3.Pho ga\n");
  printf("4.Beefsteak\n");
- printf("5.La thai tom yum\n");
+ printf("5.Lau thai tom yum\n");
 }
 int main (){
    int luachon;
