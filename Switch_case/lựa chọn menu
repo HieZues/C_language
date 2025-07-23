@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <conio.h>
+
+void MenuNuoc(){
+ printf("---Menu Nuoc Uong---\n");
+ printf("-----------------------\n");
+ printf("1.Tra Sua\n");
+ printf("2.Tra dao\n");
+ printf("3.Matchalatte\n");
+ printf("4.Nuoc Loc\n");
+ printf("5.Sua Dau");
+}
+void MenuFood () {
+ printf("---Menu DO AN---\n");
+ printf("-----------------------\n");
+ printf("1.Com rang dua bo\n");
+ printf("2.Com rang dui ga\n");
+ printf("3.Pho ga\n");
+ printf("4.Beefsteak\n");
+ printf("5.La thai tom yum\n");
+}
+int main (){
+   int luachon;
+   do {printf("====QUAN AN NHANH KMA=====\n");
+   printf("1. Menu Do An\n");
+   printf("2. Menu Nuoc Uong\n");
+   printf("CHon Menu ma ban muon xem: ");
+   scanf("%d", &luachon);
+   if (luachon < 1 || luachon > 2) {
+    printf ("Lua chon khong hop le. Vui long nhap lai!\n");
+   }
+   } while (luachon < 1 || luachon > 2);
+   switch (luachon) {
+case 1:
+    MenuFood();
+
+    break;
+case 2:
+    MenuNuoc();
+    break;
+   }
+   return 0;
+}
