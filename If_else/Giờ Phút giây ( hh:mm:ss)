@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main () {
+  int gio, phut, giay, giaycongthem, giocongthem, phutcongthem;
+     printf ("Nhap vao gio, phut, giay: ");
+     scanf ("%d%d%d", &gio, &phut, &giay);
+
+     printf ("Nhap vao giay cong them: ");
+     scanf ("%d", &giaycongthem);
+
+     giay = giay + giaycongthem;
+     if (giay >= 60) {
+        giocongthem = giay / 3600;
+        phutcongthem = (giay % 3600)/60;
+        giay = giay - (giocongthem * 3600 + phutcongthem * 60);
+
+     }
+     gio = gio + giocongthem;
+     phut = phut + phutcongthem;
+     if (phut >= 60){
+        giocongthem = phut / 60;
+        phut = (phut % 60);
+     }
+     gio = gio + giocongthem;
+     printf ("%02d : %02d : %02d", gio, phut, giay);
+
+  return 0;
+}
