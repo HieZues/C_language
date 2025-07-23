@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int player, computer;
+
+    // Khởi tạo random seed
+    srand(time(NULL));
+
+    // In menu chọn
+    printf("=== Tro choi Oan Tu Ti ===\n");
+    printf("1. Keo\n");
+    printf("2. Bua\n");
+    printf("3. Bao\n");
+    printf("Chon 1 trong 3 (1-3): ");
+    scanf("%d", &player);
+
+    // Kiểm tra nhập hợp lệ
+    if (player < 1 || player > 3) {
+        printf("Lua chon khong hop le!\n");
+        return 1;
+    }
+
+    // Máy chọn ngẫu nhiên
+    computer = rand() % 3 + 1;
+
+    // Hiển thị lựa chọn
+    const char *choices[] = {"", "Keo", "Bua", "Bao"};
+    printf("Ban chon: %s\n", choices[player]);
+    printf("May chon: %s\n", choices[computer]);
+
+    // Xét kết quả
+    if (player == computer) {
+        printf("Ket qua: Hoa!\n");
+    } else if ((player == 1 && computer == 3) ||
+               (player == 2 && computer == 1) ||
+               (player == 3 && computer == 2)) {
+        printf("Ket qua: Ban Thang!\n");
+    } else {
+        printf("Ket qua: May Thang!\n");
+    }
+
+    return 0;
+}
