@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+   char luachon;
+   do {
+    printf ("CAU HOI: DAU LA MA TRUONG HOC VIEN KY THUAT MAT MA\n");
+    printf ("a. KMA\n");
+    printf ("b. HUST\n");
+    printf ("c. HUS\n");
+    printf ("d. HANU\n");
+    printf ("Ban chon dap an: ");
+    scanf (" %c", &luachon);
+    if ( luachon < 'a' || luachon > 'd') {
+        printf ("Ban chon dap an khong hop le. Vui Long Nhap Lai!\n");
+    }
+   } while (luachon < 'a' || luachon > 'd');
+   switch (luachon) {
+case 'a':
+    printf ("Lua chon chinh xac\n");
+    break;
+default:
+    printf ("Lua chon khong chinh xac!\n");
+   }
+   return 0;
+}
