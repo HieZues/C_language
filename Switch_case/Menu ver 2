@@ -1,0 +1,58 @@
+/*
+	--------------------------
+	MAIN MENU
+	--------------------------
+	1. File
+	2. Edit
+	3. Search
+	Chon muc tuong ung: 1
+	--------------------------
+	MENU FILE
+	--------------------------
+	1. New
+	2. Open
+	Chon muc tuong ung: 2
+	Ban da chon chuc nang Open File
+
+*/
+#include <stdio.h>
+
+void main(){
+	int menu, subMenu;
+
+	printf("-------------------------\n");
+	printf("MAIN MENU\n");
+	printf("-------------------------\n");
+	printf("1. File \n");
+	printf("2. Edit \n");
+	printf("3. Search \n");
+	printf("Chon muc tuong ung: ");
+	scanf("%d", &menu);
+
+	switch (menu){
+		case 1:
+			printf("-------------------------\n");
+			printf("MENU FILE\n");
+			printf("-------------------------\n");
+			printf("1. New\n");
+			printf("2. Open\n");
+			printf("Chon muc tuong ung: ");
+			scanf("%d", &subMenu);
+
+			switch (subMenu){
+				case 1:
+					printf("Ban da chon chuc nang New File");
+					break;
+				case 2:
+					printf("Ban da chon chuc nang Open File");
+					break;
+			}
+			break;
+		case 2:
+			printf("Ban da chon Menu EDIT");
+			break;
+		default:
+			printf("Ban da chon Menu SEARCH");
+	}
+
+}
