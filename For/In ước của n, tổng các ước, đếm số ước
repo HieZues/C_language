@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int tongUoc = 0, demUoc = 0;
+    int tongChan = 0, tongLe = 0;
+
+    printf("Nhap vao N: ");
+    scanf("%d", &n);
+
+    printf("Cac uoc cua %d la:\n", n);
+    for (i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            printf("%d ", i); // in ước
+            tongUoc += i;     // tính tổng ước
+            demUoc++;         // đếm số ước
+
+            if (i % 2 == 0)
+                tongChan += i; // ước chẵn
+            else
+                tongLe += i;   // ước lẻ
+        }
+    }
+
+    printf("\nSo luong uoc: %d\n", demUoc);
+    printf("Tong cac uoc: %d\n", tongUoc);
+    printf("Tong cac uoc chan: %d\n", tongChan);
+    printf("Tong cac uoc le: %d\n", tongLe);
+
+    return 0;
+}
