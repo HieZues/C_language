@@ -1,5 +1,14 @@
 #include <stdio.h>
+ 
+/*
+i chạy từ 0 đến n - 1: đại diện cho từng hàng.
 
+j < n - i: in khoảng trắng để căn giữa dòng i.
+
+m = 2 * i + 1: số lượng dấu * ở dòng thứ i.
+
+k <= m: in các dấu * liên tiếp.
+*/
 int main () {
   int i, j, n, m, k;
   printf ("Nhap vao so hang: "); scanf ("%d", &n);
