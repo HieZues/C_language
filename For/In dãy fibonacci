@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main (){
+   int n, i, fibo1 = 1, fibo2 = 1, fiboN;
+   printf ("Ban muon in ra bao nhieu phan tu cua day fibonacci");
+   scanf ("%d", &n);
+   printf ("%d %d", fibo1, fibo2);
+   for (i = 3; i <= n; i ++){
+    fiboN = fibo1 + fibo2;
+    printf ("%-2d ", fiboN);
+    fibo1 = fibo2;
+    fibo2 = fiboN;
+   }
+}
